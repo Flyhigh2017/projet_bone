@@ -3,6 +3,7 @@ import cv2
 from os import listdir
 import tensorflow as tf
 import codecs, json
+import sys
 def contrast(img, clipLimit = 3.0):
     def max_to_js(mat, path):
         temp = mat.tolist()
@@ -35,11 +36,11 @@ def contrast(img, clipLimit = 3.0):
     print max_to_js(img2,file_path1)
     print max_to_js(start_matrix,file_path2)
 
-'''
-data_path = '/Users/anekisei/Documents/experiment/try.jpg'
+
+data_path = sys.argv[1]
 im = cv2.imread(data_path)
 contrast(im)
-
+'''
 file_path = '/Users/anekisei/Documents/experiment/path.json'
 obj_text = codecs.open(file_path, 'r', encoding='utf-8').read()
 b_new = json.loads(obj_text)
