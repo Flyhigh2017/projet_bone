@@ -1,0 +1,16 @@
+虚拟环境+tensorflow安装：
+Step1: To install anaconda: https://docs.anaconda.com/anaconda/install/mac-os 
+Step2: set up conda environment: create -n tensorflow pip python=2.7 (# or python=3.3, etc.)
+
+Step3: activate conda environment: source activate tensorflow
+Step4: install tensorflow: pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --ignore-installed --upgrade TF_PYTHON_URL
+其中“TF_PYTHON_URL”是 TensorFlow Python 软件包的网址。https://www.tensorflow.org/install/install_mac?hl=zh-cn#the_url_of_the_tensorflow_python_package
+
+教程原网址：https://www.tensorflow.org/install/install_mac?hl=zh-cn
+
+opencv安装：
+In the same environment as above: conda install -c menpo opencv
+install required libraries: conda install -c anaconda numpy
+conda install pandas, conda install -c conda- forge matplotlib
+
+（每次重启terminal记得运行source activate tensorflow, tensorflow是刚开始创建的环境）
